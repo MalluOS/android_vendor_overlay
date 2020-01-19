@@ -1,4 +1,4 @@
-# Copyright (C) 2017-2019 crDroid Android Project
+# Copyright (C) 2017-2020 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,26 +17,4 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 DEVICE_PACKAGE_OVERLAYS += vendor/overlay/common
 
 PRODUCT_COPY_FILES += \
-    vendor/overlay/prebuilt/system/fonts/Aclonica.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Aclonica.ttf \
-    vendor/overlay/prebuilt/system/fonts/Amarante.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Amarante.ttf \
-    vendor/overlay/prebuilt/system/fonts/Bariol-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Bariol-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/Cagliostro-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Cagliostro-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/Comfortaa.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Comfortaa.ttf \
-    vendor/overlay/prebuilt/system/fonts/Comic_Sans.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Comic_Sans.ttf \
-    vendor/overlay/prebuilt/system/fonts/Coolstory-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Coolstory-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/Exotwo.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Exotwo.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-Bold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Bold.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-BoldItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-BoldItalic.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Italic.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-Medium.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Medium.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-MediumItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/overlay/prebuilt/system/fonts/GoogleSans-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/LGSmartGothic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/LGSmartGothic.ttf \
-    vendor/overlay/prebuilt/system/fonts/Rosemary-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Rosemary-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/SamsungOne.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SamsungOne.ttf \
-    vendor/overlay/prebuilt/system/fonts/SlateFromOP-Light.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Light.ttf \
-    vendor/overlay/prebuilt/system/fonts/SlateFromOP-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Regular.ttf \
-    vendor/overlay/prebuilt/system/fonts/SonySketch.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SonySketch.ttf \
-    vendor/overlay/prebuilt/system/fonts/Storopia.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Storopia.ttf \
-    vendor/overlay/prebuilt/system/fonts/Surfer.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Surfer.ttf \
-    vendor/overlay/prebuilt/system/fonts/Ubuntu.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Ubuntu.ttf
+    $(call find-copy-subdir-files,*,vendor/overlay/prebuilt/system/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts)
