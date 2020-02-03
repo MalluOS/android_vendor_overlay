@@ -30,6 +30,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/overlays/prebuilt/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts)
 
+PRODUCT_PACKAGES += \
+    BrightnessSliderOverlay
+
 # Icon shape overlays
 PRODUCT_PACKAGES += \
     IconShapeCylinderOverlay \
