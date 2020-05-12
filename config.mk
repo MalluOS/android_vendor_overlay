@@ -20,6 +20,10 @@ DEVICE_PACKAGE_OVERLAYS += vendor/overlays/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/overlays/overlay/fod
 endif
 
+# Include {Lato,Rubik} fonts
+$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/overlay/prebuilt/system/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts)
 
