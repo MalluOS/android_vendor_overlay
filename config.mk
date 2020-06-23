@@ -16,9 +16,15 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
 DEVICE_PACKAGE_OVERLAYS += vendor/overlays/overlay/common
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/overlays/overlay/common
+
 ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-DEVICE_PACKAGE_OVERLAYS += vendor/overlays/overlay/fod
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/overlays/overlay/fod
+DEVICE_PACKAGE_OVERLAYS += vendor/overlays/overlay/fod-animations
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/overlays/overlay/fod-animations
+endif
+
+ifeq ($(TARGET_HAS_FOD),true)
+DEVICE_PACKAGE_OVERLAYS += vendor/overlays/overlay/fod-icons
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/overlays/overlay/fod-icons
 endif
 
 # Include {Lato,Rubik} fonts
