@@ -28,4 +28,4 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/overlay/prebuilt/product/fonts,$(TARGET_COPY_OUT_SYSTEM)/fonts)
 
 # Icon Shapes
-include vendor/overlay/iconshapes.mk
+include vendor/overlays/iconshapes.mk
